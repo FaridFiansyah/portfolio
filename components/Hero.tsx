@@ -17,7 +17,7 @@ export default function Hero() {
 
       <div className="wrap hero-grid">
         <div className="hero-portrait">
-          <Img src="/images/hero.jpeg" alt="Mohamad Farid Fiansyah Portrait" eager />
+          <Img src="/images/hero.webp" alt="Mohamad Farid Fiansyah Portrait" eager />
         </div>
 
         <div className="hero-copy">

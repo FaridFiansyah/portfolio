@@ -26,6 +26,11 @@ body {
 a { color: inherit; text-decoration-color: color-mix(in srgb, var(--accent) 60%, transparent); text-underline-offset: 3px; }
 a:hover { color: var(--accent); }
 img { max-width: 100%; display: block; }
+.responsive-image { opacity: 0; transition: opacity 0.25s ease; }
+.responsive-image.is-loaded { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .responsive-image { transition: none; }
+}
 h1, h2, h3, h4 { line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 0.5em; }
 h2 { font-size: clamp(2rem, 5vw, 3.4rem); }
 h3 { font-size: clamp(1.25rem, 2.4vw, 1.7rem); }
@@ -278,3 +283,45 @@ blockquote { margin: 0 0 1.2em; padding-left: 16px; border-left: 2px solid var(-
 @media (max-width: 820px) { .project-layout-doc { grid-template-columns: 1fr; } .project-documentation { margin-top: 4px; } .project-documentation-frame { height: clamp(220px, 68vw, 380px); } }
 .gallery-single { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
 @media (max-width: 620px) { .gallery { grid-template-columns: 1fr; } }
+
+/* mobile hardening */
+main, section, article, figure { min-width: 0; }
+h1, h2, h3, h4, p, dd, a { overflow-wrap: anywhere; }
+@media (max-width: 620px) {
+  .wrap { width: calc(100% - 24px); }
+  .narrow { width: calc(100% - 24px); }
+  .section { padding: 56px 0; }
+  .nav-inner { height: 60px; }
+  .nav-links { inset: 60px 0 auto 0; }
+  .brand-name { max-width: 58vw; font-size: 0.92rem; }
+  .brand-sub { max-width: 58vw; }
+  .hero-grid { margin-top: 12px; }
+  .hero-portrait { width: 100%; max-width: 360px; margin-inline: auto; }
+  .hero-roles { font-size: clamp(2rem, 11vw, 3rem); }
+  .lead { line-height: 1.55; }
+  .meta { gap: 14px 20px; }
+  .meta div { flex: 1 1 140px; }
+  .about-visual { min-height: 370px !important; }
+  .about-photo { width: 82%; }
+  .polaroid { width: 38%; }
+  .idcard { width: 46%; }
+  .pcb { max-width: 72%; bottom: -24px; }
+  .card { padding: 18px; }
+  .project-head .idx { font-size: 1.8rem; }
+  .gallery { gap: 10px; }
+  .shot { aspect-ratio: 16 / 10; }
+  .lightbox { padding: 12px; }
+  .lb-close { top: 10px; right: 10px; }
+  .lb-nav { width: 40px; height: 40px; }
+  .lb-nav.prev { left: 8px; }
+  .lb-nav.next { right: 8px; }
+  .email { font-size: 1.05rem; }
+  .footer-inner { flex-direction: column; }
+}
+@media (max-width: 380px) {
+  .brand-sub { display: none; }
+  .tabs { display: grid; grid-template-columns: 1fr 1fr; }
+  .tab { width: 100%; padding-inline: 10px; }
+  .lightning li { align-items: flex-start; }
+  .vote { width: 100%; }
+}

@@ -41,8 +41,8 @@ export const projects: Project[] = [
       "The architecture prioritized resilient communication, low-latency telemetry, and clean data flows between embedded hardware, robot control, and the mission control layer.",
     ],
     images: [
-      img("Krai1.JPG.jpeg", "URDC Bandhayudha competition setup"),
-      img("Krai2.JPG.jpeg", "URDC Bandhayudha robot system"),
+      img("Krai1.JPG.webp", "URDC Bandhayudha competition setup"),
+      img("Krai2.JPG.webp", "URDC Bandhayudha robot system"),
     ],
     tech: [
       "ROS 2", "UDP Telemetry Protocol", "RefBox Infrastructure", "STM32 Embedded Systems",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       "This work strengthened the practical integration between deep learning perception and robotics control in constrained hardware environments.",
     ],
     images: [],
-    documentation: img("jetson1.jpeg", "Jetson vision system documentation"),
+    documentation: img("jetson1.webp", "Jetson vision system documentation"),
     tech: [
       "NVIDIA Jetson Orin Nano", "Ultralytics YOLOv11", "OpenCV", "PyTorch", "Deep Learning Inference",
       "HSV Calibration", "Computer Vision", "Edge AI", "Real-Time Detection",
@@ -85,8 +85,8 @@ export const projects: Project[] = [
       "The effort improved the platform's usability, maintainability, and presentation quality for stakeholders and external audiences.",
     ],
     images: [
-      img("Sre1.png", "SRE Undip website interface"),
-      img("Sre2.png", "SRE Undip platform documentation"),
+      img("Sre1.webp", "SRE Undip website interface"),
+      img("Sre2.webp", "SRE Undip platform documentation"),
     ],
     tech: [
       "Laravel", "Inertia.js", "React", "MySQL", "Web Platform Design", "Full-Stack Systems",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
       "This project highlighted hardware-level design thinking for battery management, power monitoring, and efficient embedded energy systems.",
     ],
     images: [],
-    documentation: img("Solar1.png", "Solar Home System prototype documentation"),
+    documentation: img("Solar1.webp", "Solar Home System prototype documentation"),
     tech: [
       "Solar Energy System", "INA219", "TP4056", "18650 Battery", "Hysteresis Logic",
       "Embedded Power Monitoring", "Low-Power Design", "Energy Management",

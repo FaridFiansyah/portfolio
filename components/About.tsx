@@ -8,13 +8,13 @@ export default function About() {
       <div className="wrap about-grid">
         <Reveal className="about-visual">
           <div className="about-photo">
-            <Img src="/images/potrait.jpeg" alt="Farid portrait" />
+            <Img src="/images/potrait.webp" alt="Farid portrait" />
           </div>
           <div className="polaroid">
-            <Img src="/images/memory.jpeg" alt="Engineering memory" />
+            <Img src="/images/memory.webp" alt="Engineering memory" />
           </div>
           <div className="idcard">
-            <Img src="/images/KTM.jpeg" alt="Student ID card" />
+            <Img src="/images/KTM.webp" alt="Student ID card" />
           </div>
           <div className="pcb" aria-hidden>
             <span>Mobile</span>
