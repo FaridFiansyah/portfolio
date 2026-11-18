@@ -148,12 +148,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* about */
 .about-grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: clamp(28px, 6vw, 80px); align-items: center; }
-.about-visual { position: relative; min-height: 520px; }
-.about-photo { width: 78%; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.about-visual { position: relative; min-height: 390px !important; isolation: isolate; }
+.about-photo { position: relative; z-index: 1; width: 72%; aspect-ratio: 4 / 5; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--bg-2); }
 .about-photo img, .about-photo .ph { width: 100%; height: 100%; object-fit: cover; }
-.polaroid { position: absolute; right: 0; top: 4%; width: 34%; padding: 8px 8px 28px; background: #f2f2f0; transform: rotate(6deg); box-shadow: 0 18px 40px rgba(0,0,0,.5); }
-.polaroid img, .polaroid .ph { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.idcard { position: absolute; right: 6%; bottom: 0; width: 40%; border-radius: 12px; overflow: hidden; transform: rotate(-4deg); border: 1px solid #333; box-shadow: 0 18px 40px rgba(0,0,0,.5); }
+.polaroid { position: absolute; z-index: 3; right: 0; top: 2%; width: 36%; aspect-ratio: 1 / 1.18; padding: 8px 8px 18px; background: #f2f2f0; transform: rotate(6deg); box-shadow: 0 18px 40px rgba(0,0,0,.5); overflow: hidden; }
+.polaroid img, .polaroid .ph { width: 100%; height: calc(100% - 10px); aspect-ratio: 1; object-fit: cover; }
+.idcard { position: absolute; z-index: 2; right: 4%; bottom: 3%; width: 48%; aspect-ratio: 1526 / 943; border-radius: 12px; overflow: hidden; transform: rotate(-4deg); border: 1px solid #333; background: #111; box-shadow: 0 18px 40px rgba(0,0,0,.5); }
+.idcard img, .idcard .ph { width: 100%; height: 100%; object-fit: cover; }
 .pcb {
   position: absolute; left: 0; bottom: -8px; display: flex; flex-wrap: wrap; gap: 6px; max-width: 58%;
   font-family: var(--mono); font-size: 0.62rem; color: var(--accent); opacity: 0.85;
@@ -302,9 +303,9 @@ h1, h2, h3, h4, p, dd, a { overflow-wrap: anywhere; }
   .meta { gap: 14px 20px; }
   .meta div { flex: 1 1 140px; }
   .about-visual { min-height: 370px !important; }
-  .about-photo { width: 82%; }
-  .polaroid { width: 38%; }
-  .idcard { width: 46%; }
+  .about-photo { width: 72%; }
+  .polaroid { width: 36%; top: 2%; }
+  .idcard { width: 48%; right: 4%; bottom: 3%; }
   .pcb { max-width: 72%; bottom: -24px; }
   .card { padding: 18px; }
   .project-head .idx { font-size: 1.8rem; }
