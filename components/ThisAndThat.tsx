@@ -13,7 +13,6 @@ export default function ThisAndThat() {
     <section className="section">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow">Quick Takes &amp; Quirks</p>
           <h2>This &amp; That.</h2>
           <p className="big">
             Lifelong learner with too many hobbies and a love to tinker. Full-time physics researcher, part-time engineer,

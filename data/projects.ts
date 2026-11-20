@@ -41,7 +41,7 @@ export const projects: Project[] = [
       "The architecture prioritized resilient communication, low-latency telemetry, and clean data flows between embedded hardware, robot control, and the mission control layer.",
     ],
     images: [
-      img("Krai1.JPG.webp", "URDC Bandhayudha competition setup"),
+      img("Krai1-v2.webp", "URDC Bandhayudha competition setup"),
       img("Krai2.JPG.webp", "URDC Bandhayudha robot system"),
     ],
     tech: [

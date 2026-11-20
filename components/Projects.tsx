@@ -88,9 +88,8 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
   return (
     <Reveal as="article" className="card project">
       <div className="project-head">
-        <span className="idx">{String(index + 1).padStart(2, "0")}</span>
         <div>
-          <p className="eyebrow">{p.label}</p>
+          <p className="designator">{p.label}</p>
           {p.sub && <p className="sub">{p.sub}</p>}
         </div>
       </div>
@@ -165,7 +164,7 @@ function ProjectCard({ p, index }: { p: Project; index: number }) {
         </div>
       )}
 
-      <p className="eyebrow">Technologies &amp; Methodologies:</p>
+      <p className="designator">Technologies &amp; Methodologies</p>
       <div className="chips">
         {p.tech.map((t) => (
           <span key={t} className="chip tag">

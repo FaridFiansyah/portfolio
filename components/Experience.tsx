@@ -45,7 +45,6 @@ export default function Experience() {
     <section id="experience" className="section">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow">Primary Track Record</p>
           <h2>Professional &amp; Engineering Experience</h2>
           <p className="muted">Building robotic systems, embedded platforms, and production-ready digital infrastructure for real-world engineering problems.</p>
         </Reveal>
@@ -57,7 +56,6 @@ export default function Experience() {
         </ol>
 
         <Reveal className="sub-head">
-          <p className="eyebrow">Education &amp; Campus Involvement</p>
           <h2>Academic Background, Competitions &amp; Achievements</h2>
           <p className="muted">Academic study, contests, and campus-driven progress supporting my engineering path.</p>
         </Reveal>

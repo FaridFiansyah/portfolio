@@ -11,7 +11,6 @@ export default function Faq() {
     <section id="faq" className="section">
       <div className="wrap narrow">
         <Reveal>
-          <p className="eyebrow">FAQ</p>
           <h2>Frequently Asked Questions.</h2>
           <p className="muted">
             Key details on my background, research interests, engineering workflow, and collaboration.
@@ -29,7 +28,6 @@ export default function Faq() {
                   aria-controls={`faq-${i}`}
                   onClick={() => setOpen(isOpen ? null : i)}
                 >
-                  <span className="num">{String(i + 1).padStart(2, "0")}</span>
                   <span className="qtext">{item.q}</span>
                   <span className="plus" aria-hidden>
                     {isOpen ? "−" : "+"}

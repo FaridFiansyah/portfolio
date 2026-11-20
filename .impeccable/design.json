@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T00:00:00Z",
+  "title": "Design System: Farid Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "soldermask": { "role": "neutral", "displayName": "Soldermask", "canonical": "#0a1210", "tonalRamp": ["#050908", "#0a1210", "#0f1a17", "#111e1a", "#22352f", "#3a5149", "#8fa39a", "#e8ede9"] },
+      "copper": { "role": "primary", "displayName": "Copper", "canonical": "#d08a52", "tonalRamp": ["#3a2312", "#5c3a1e", "#8a5a30", "#b07240", "#d08a52", "#e0a06c", "#ecc19a", "#f6e2cf"] },
+      "tin-silver": { "role": "secondary", "displayName": "Tin Silver", "canonical": "#9fb4ad", "tonalRamp": ["#1d2824", "#2e3d38", "#455650", "#5f726b", "#7c908a", "#9fb4ad", "#c3d1cc", "#e4ece9"] },
+      "silkscreen": { "role": "neutral", "displayName": "Silkscreen", "canonical": "#e8ede9", "tonalRamp": ["#22352f", "#3a5149", "#5f726b", "#8fa39a", "#a9b9b1", "#c3cec8", "#e8ede9", "#f6f9f7"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero name only." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2 with copper trace flourish." },
+      "title": { "displayName": "Title", "purpose": "Card and principle h3." },
+      "body": { "displayName": "Body", "purpose": "Prose and lead paragraph." },
+      "label": { "displayName": "Label", "purpose": "Measured values, designators, captions in JetBrains Mono." }
+    },
+    "shadows": [
+      { "name": "loose-object", "value": "0 10px 28px rgba(0,0,0,.5)", "purpose": "Polaroid and ID card in the About photo stack only." },
+      { "name": "pad-ring", "value": "0 0 0 4px #0a1210", "purpose": "Masks the timeline rail behind each copper pad dot." }
+    ],
+    "motion": [
+      { "name": "reveal", "value": "opacity .7s ease, transform .7s ease; translateY(18px)", "purpose": "Section reveal on scroll." },
+      { "name": "marquee", "value": "linear 38s-40s infinite", "purpose": "Skill chip rows; pauses on hover." },
+      { "name": "trace-fill", "value": "scaleY(var(--p)) from top", "purpose": "Left-edge rail tracks scroll progress." },
+      { "name": "scope-ease", "value": "0.06 lerp per frame", "purpose": "Scope frequency and amplitude follow pointer." }
+    ],
+    "breakpoints": [
+      { "name": "wide", "value": "960px" },
+      { "name": "tablet", "value": "820px" },
+      { "name": "mobile", "value": "620px" },
+      { "name": "narrow", "value": "380px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Copper action, e.g. Email me.",
+      "html": "<a class=\"ds-btn\" href=\"#\">Email me</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:6px;border:1px solid #d08a52;background:#d08a52;color:#0a1210;font-weight:600;font-size:.95rem;text-decoration:none;transition:background .2s,color .2s}.ds-btn:hover{background:#e0a06c;color:#0a1210}.ds-btn:focus-visible{outline:2px solid #d08a52;outline-offset:3px}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action, e.g. See projects.",
+      "html": "<a class=\"ds-ghost\" href=\"#\">See projects</a>",
+      "css": ".ds-ghost{display:inline-flex;align-items:center;min-height:44px;padding:12px 20px;border-radius:8px;border:1px solid #22352f;background:#111e1a;color:#e8ede9;font-weight:600;font-size:.95rem;text-decoration:none;transition:border-color .2s,color .2s}.ds-ghost:hover{border-color:#d08a52;color:#d08a52}.ds-ghost:focus-visible{outline:2px solid #d08a52;outline-offset:3px}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Skill and tag label; tag variant is mono.",
+      "html": "<span class=\"ds-chip\">ROS 2</span> <span class=\"ds-chip ds-tag\">2024</span>",
+      "css": ".ds-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border:1px solid #22352f;border-radius:6px;background:#0f1a17;color:#c3cec8;font-size:.8rem}.ds-tag{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.74rem;color:#8fa39a}"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat bordered container for projects and publications.",
+      "html": "<article class=\"ds-card\"><h3>Mobile robot</h3><p>Jetson, ROS 2, STM32 motor control.</p></article>",
+      "css": ".ds-card{border:1px solid #22352f;border-radius:6px;background:#111e1a;padding:28px;color:#e8ede9;transition:border-color .2s}.ds-card:hover{border-color:#3a5149}.ds-card h3{margin:0 0 .5em;font-size:1.4rem;line-height:1.15}.ds-card p{margin:0;color:#c3cec8}"
+    },
+    {
+      "name": "Tab",
+      "kind": "chip",
+      "refersTo": "tab-selected",
+      "description": "Filter tab; selected state fills copper.",
+      "html": "<button class=\"ds-tab\">All</button> <button class=\"ds-tab on\">Robotics</button>",
+      "css": ".ds-tab{min-height:44px;padding:9px 16px;border-radius:8px;border:1px solid #22352f;background:transparent;color:#c3cec8;font:inherit;font-size:.88rem;cursor:pointer;transition:all .2s}.ds-tab:hover{border-color:#9fb4ad}.ds-tab.on{background:#d08a52;border-color:#d08a52;color:#0a1210;font-weight:600}.ds-tab:focus-visible{outline:2px solid #d08a52;outline-offset:3px}"
+    },
+    {
+      "name": "Signal Scope Bar",
+      "kind": "custom",
+      "refersTo": "scope",
+      "description": "Mono channel bar and readout over the oscilloscope canvas.",
+      "html": "<div class=\"ds-scope\"><div class=\"ds-bar\"><span>CH1</span><span class=\"ds-ch2\">CH2</span><span class=\"ds-read\">100 Hz · 2.00 Vpp</span></div></div>",
+      "css": ".ds-scope{background:#070e0c;border:1px solid #22352f;border-radius:6px;overflow:hidden}.ds-bar{display:flex;gap:14px;padding:10px 14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;color:#d08a52}.ds-ch2{color:#9fb4ad}.ds-read{margin-left:auto;color:#c3cec8;font-variant-numeric:tabular-nums}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Printed Circuit Board",
+    "overview": "The page is one board the visitor scrolls along. Sections are components placed on a soldermask ground, copper is the single committed accent, and measured values are set in mono like silkscreen. Depth comes from hairline borders and tonal steps between greens, never from glow.",
+    "keyCharacteristics": [
+      "Dark green-black ground, off-white text, one copper accent, tin-silver as the only secondary line color.",
+      "Flat at rest; borders carry structure.",
+      "Mono type only for measured values and designators.",
+      "Copper trace motifs appear as hero background and under every section h2.",
+      "Motion is reveal-up and trace-fill, all disabled under prefers-reduced-motion."
+    ],
+    "rules": [
+      { "name": "The One Copper Rule", "body": "Copper is the only accent. It marks action, selection, and progress; it is never a large fill other than a button or selected tab.", "section": "colors" },
+      { "name": "The No Glow Rule", "body": "No neon, no text gradients. The only radial wash is a faint copper tint behind the contact section.", "section": "colors" },
+      { "name": "The Measured Values Rule", "body": "Mono is for things that are measured or identified (dates, DOI, index numbers, readouts, designators). Prose and headings never use it.", "section": "typography" },
+      { "name": "The Hairline Rule", "body": "Structure comes from a 1px Trace Line border, not from shadow or fill. Shadow is reserved for loose objects (polaroid, ID card).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do use copper (#d08a52) only for action, selection, progress, and designators.",
+      "Do build structure from 1px Trace Line borders and tonal steps between the greens.",
+      "Do set measured values (dates, DOI, indices, readouts) in JetBrains Mono.",
+      "Do keep touch targets at 44px and keep the 2px copper focus ring.",
+      "Do gate reveals, marquees, scope animation and trace fill behind prefers-reduced-motion."
+    ],
+    "donts": [
+      "Don't add glow, neon, or gradient text; the page refuses the generic dark portfolio.",
+      "Don't use a second accent hue; tin-silver is a line color, never a fill.",
+      "Don't put drop shadows on cards; shadow is only for the loose polaroid and ID card.",
+      "Don't set prose or headings in mono."
+    ]
+  }
+}
